@@ -3,31 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class instanciador : MonoBehaviour
-    //script instanciador colmnas
+   
 {
+    float intervalo;
     [SerializeField] GameObject capsula;
-    [SerializeField] Transform initPost;
+    [SerializeField] Transform instantiatePos;
 
-    private float  despX = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 desPost = initPost.position;
-        Vector3 despl = new Vector3( despX , 0, 0);
+        intervalo = 0.5f;
 
-        for (int n = 0; n < 10; n++) 
-
-
-        {
-            Instantiate(capsula, desPost, Quaternion.identity);
-
-            desPost = desPost + despl;
-        }
+        StartCoroutine("CrearCapsula");
+        StartCoroutine("CrearCapsula");
+        StartCoroutine("CrearCapsula");
+        StartCoroutine("CrearCapsula");
+        StartCoroutine("CrearCapsula");
+        StartCoroutine("CrearCapsula");
+        StartCoroutine("CrearCapsula");
     }
 
     // Update is called once per frame
     void Update()
     {
-     
+
+    }
+
+    IEnumerator CrearCapsula()
+    {
+        while (true)
+        {
+            
+            float randomX = Random.Range(-10f, 10f);
+            float randomY = Random.Range(0f, 10f);
+            Vector3 newPos = new Vector3(randomX, randomY, instantiatePos.position.z);
+            Instantiate(capsula, newPos, Quaternion.identity);
+
+            yield return new WaitForSeconds(intervalo);
+        }
     }
 }
