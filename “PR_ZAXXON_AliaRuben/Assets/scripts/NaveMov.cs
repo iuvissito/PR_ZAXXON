@@ -57,13 +57,13 @@ public class NaveMov : MonoBehaviour
 
             }
            float posZ = transform.position.z;
-            print(posZ + despZ);
+           
            if ((posZ < limitZ || despZ < 0f) && (posZ > -limitZ || despZ > 0f))
             {
             
-            transform.Translate(Vector3.back * Time.deltaTime * Speed * despZ);
+            transform.Translate(Vector3.forward * Time.deltaTime * Speed * despZ,Space.World);
 
-            // de momento la restriccion en z no funciona bien
+            // controles invertidos porque lo quiero asi para mayor dificultad
             }
         transform.Rotate(0f,0f,despR* Time.deltaTime* RtSpeed * -RtSpeed);
                 
