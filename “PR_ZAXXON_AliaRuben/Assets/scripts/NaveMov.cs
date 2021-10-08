@@ -26,7 +26,7 @@ public class NaveMov : MonoBehaviour
         float despZ = Input.GetAxis("Profundidad");
       
    
-        transform.Translate(Vector3.right * Time.deltaTime * Speed *desplazamientoX,Space.World);
+       // transform.Translate(Vector3.right * Time.deltaTime * Speed *desplazamientoX,Space.World);
         transform.Translate(Vector3.up * Time.deltaTime * RtSpeed * despY,Space.World);
         transform.Translate(Vector3.back * Time.deltaTime * Speed * despZ);
 
