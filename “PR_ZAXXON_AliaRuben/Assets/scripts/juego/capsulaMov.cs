@@ -24,7 +24,7 @@ public class capsulaMov : MonoBehaviour
         speed = initGame.velDino;
         transform.Translate(Vector3.back * Time.deltaTime * speed);
         float posZ = transform.position.z;
-        print(posZ);
+        //print(posZ);
         if (posZ < -20)
         {
             Destroy(gameObject);

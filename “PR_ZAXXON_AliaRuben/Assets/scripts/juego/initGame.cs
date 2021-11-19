@@ -6,13 +6,13 @@ public class initGame : MonoBehaviour
 {
     public float velDino;
     public bool alive;
-
-     // Start is called before the first frame update
+    public int punt;
+    // Start is called before the first frame update
     void Start()
     {
         velDino = 20f;
          alive = true;
-         public int punt;
+        punt = 0;
          
          //queda volumen
     }
@@ -27,15 +27,16 @@ public class initGame : MonoBehaviour
 
     }
     
-    void Morir()
+    public void Morir()
     {
         velDino = 0f;
         alive = false;
        GameObject.Find("nave").SetActive(false);
     }
-    void IncrementoPuntuacion()
+     public void IncrementoPuntuacion()
     {
         punt++;
+        print( "tiemes : " + punt);
         
     }
 }
