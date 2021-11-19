@@ -5,7 +5,7 @@ using UnityEngine;
 public class capsulaMov : MonoBehaviour
 {
     float speed;
-    [SerializeField] GameObject objectInit;
+    GameObject objectInit;
     initGame initGame;
 
     // Start is called before the first frame update

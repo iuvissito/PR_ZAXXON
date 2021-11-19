@@ -10,7 +10,7 @@ public class initGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        velDino = 20f;
+        velDino = 15f;
          alive = true;
         punt = 0;
          
@@ -37,6 +37,6 @@ public class initGame : MonoBehaviour
     {
         punt++;
         print( "tiemes : " + punt);
-        
+
     }
 }

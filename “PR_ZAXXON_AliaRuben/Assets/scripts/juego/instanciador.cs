@@ -32,12 +32,24 @@ public class instanciador : MonoBehaviour
             StartCoroutine("CrearCapsula");
             */
             StartCoroutine("Crearpowers");
-        }
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+        }
+        /*
+        if (init.alive == false)
+        {
+
+            StopCoroutine("CrearCapsula");
+            StopCoroutine("Crearpowers");
+        }
+        */
+
+
+    }
+    
+
+// Update is called once per frame
+void Update()
     {
 
     }

@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -76,6 +77,7 @@ public class NaveMov : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        print(other.gameObject.name);
         if(other.gameObject.layer == 6)
         {
             initGame.SendMessage("Morir");
