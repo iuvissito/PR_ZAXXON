@@ -43,7 +43,7 @@ public class instanciador : MonoBehaviour
             StopCoroutine("Crearpowers");
         }
         */
-
+        
 
     }
     

@@ -91,6 +91,7 @@ public class NaveMov : MonoBehaviour
            
             initGameScript.SendMessage("Morir");
 
+
           
         }
          if(other.gameObject.layer == 7)
