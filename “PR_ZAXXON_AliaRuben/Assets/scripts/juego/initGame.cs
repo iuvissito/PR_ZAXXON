@@ -11,7 +11,7 @@ public class initGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ins = GameObject.Find("instanciador").GetComponent<instanciador>();
+        ins = GameObject.Find("instanziador").GetComponent<instanciador>();
         velDino = 15f;
          alive = true;
         punt = 0;
@@ -33,10 +33,9 @@ public class initGame : MonoBehaviour
     {
         velDino = 0f;
         alive = false;
-       GameObject.Find("dragon").SetActive(false);
-        StopCoroutine("CrearCapsula");
-        StopCoroutine("Crearpowers");
-
+        GameObject.Find("dragon").SetActive(false);
+        ins.SendMessage("paradcorrutina");
+        print("me morrido");
 
     }
      public void IncrementoPuntuacion()

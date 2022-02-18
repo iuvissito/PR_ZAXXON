@@ -53,6 +53,11 @@ void Update()
     {
 
     }
+    public void paradcorrutina()
+    {
+        StopCoroutine("CrearCapsula");
+        StopCoroutine("Crearpowers");
+    }
 
     IEnumerator CrearCapsula()
     {
