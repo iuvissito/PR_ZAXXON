@@ -17,4 +17,8 @@ public class initmenu : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    public void MenuInicial()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
