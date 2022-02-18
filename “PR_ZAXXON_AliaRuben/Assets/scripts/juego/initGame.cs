@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class initGame : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class initGame : MonoBehaviour
         GameObject.Find("dragon").SetActive(false);
         ins.SendMessage("paradcorrutina");
         print("me morrido");
+        Invoke("GameOver",2f);
 
     }
      public void IncrementoPuntuacion()
@@ -48,5 +50,9 @@ public class initGame : MonoBehaviour
     public void Saludar()
     {
         print("Hola mundo");
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene(3);
     }
 }
