@@ -27,12 +27,14 @@ public class NaveMov : MonoBehaviour
         limitV = 1.28f;
         limiteSuelo = 0.06f;
         limitZ = 1.5f;
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(initGameScript.alive)
+        //print(transform.position.x + transform.position.y);
+        if (initGameScript.alive)
         {
             MoverNave();
         }
