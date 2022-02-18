@@ -60,8 +60,8 @@ void Update()
         {
             for(int n = 0; n < 7; n++)
             {
-                float randomX = Random.Range(-10f, 10f);
-                float randomY = Random.Range(0f, 10f);
+                float randomX = Random.Range(-1.5f, 1.5f);
+                float randomY = Random.Range(0f, 1.28f);
                 Vector3 newPos = new Vector3(randomX, randomY, instantiatePos.position.z);
                 Instantiate(capsula, newPos, Quaternion.identity);
 

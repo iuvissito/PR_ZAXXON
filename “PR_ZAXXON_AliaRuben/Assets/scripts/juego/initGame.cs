@@ -31,12 +31,17 @@ public class initGame : MonoBehaviour
     {
         velDino = 0f;
         alive = false;
-       GameObject.Find("nave").SetActive(false);
+       GameObject.Find("dragon").SetActive(false);
     }
      public void IncrementoPuntuacion()
     {
         punt++;
         print( "tiemes : " + punt);
 
+    }
+
+    public void Saludar()
+    {
+        print("Hola mundo");
     }
 }

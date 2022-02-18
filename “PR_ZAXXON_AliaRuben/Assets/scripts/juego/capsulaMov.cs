@@ -10,11 +10,12 @@ public class capsulaMov : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+
     {
         objectInit = GameObject.Find("initGame");
         initGame = objectInit.GetComponent<initGame>();
         speed = initGame.velDino;
-
+        //print(transform.position);
 
     }
 
@@ -25,7 +26,7 @@ public class capsulaMov : MonoBehaviour
         transform.Translate(Vector3.back * Time.deltaTime * speed);
         float posZ = transform.position.z;
         //print(posZ);
-        if (posZ < -20)
+        if (posZ < -5)
         {
             Destroy(gameObject);
         }
