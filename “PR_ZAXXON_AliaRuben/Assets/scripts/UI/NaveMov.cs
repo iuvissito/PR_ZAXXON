@@ -8,11 +8,15 @@ public class NaveMov : MonoBehaviour
 
     [SerializeField] float Speed;
     [SerializeField] float RtSpeed;
+    [SerializeField] AudioClip choqueAudio;
+    [SerializeField] AudioClip musicpower;
     float limitH;
     float limitV;
     float limiteSuelo;
     float limitZ;
     initGame initGameScript;
+    AudioSource naveAudioSource;
+
     
     // Start is called before the first frame update
 
@@ -27,6 +31,7 @@ public class NaveMov : MonoBehaviour
         limitV = 1.28f;
         limiteSuelo = 0.06f;
         limitZ = 1.5f;
+         naveAudioSource = GetComponent<AudioSource>();
       
     }
 
@@ -90,14 +95,14 @@ public class NaveMov : MonoBehaviour
        // print(other.gameObject.name);
         if(other.gameObject.layer == 6)
         {
-           
+           naveAudioSource.PlayOneShot(choqueAudio, 1f);
             initGameScript.SendMessage("Morir");
-
-
           
         }
          if(other.gameObject.layer == 7)
          {
+             print("hola");
+             naveAudioSource.PlayOneShot(musicpower, 1f);
             initGameScript.SendMessage("IncrementoPuntuacion");
           
         } 

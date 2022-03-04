@@ -6,7 +6,8 @@ public class instanciador : MonoBehaviour
 
 {
     float intervalo;
-    [SerializeField] GameObject capsula;
+    //[SerializeField] GameObject  capsula;
+    [SerializeField] GameObject[] obstaculo;
     [SerializeField] GameObject power;
     [SerializeField] Transform instantiatePos;
 
@@ -20,7 +21,7 @@ public class instanciador : MonoBehaviour
         init = GameObject.Find("initGame").GetComponent<initGame>();
         if (init.alive)
         {
-            intervalo = 0.5f;
+            intervalo = 1f;
 
             StartCoroutine("CrearCapsula");
             /*
@@ -63,12 +64,12 @@ void Update()
     {
         while (true)
         {
-            for(int n = 0; n < 7; n++)
+            for(int n = 0; n < 4; n++)
             {
-                float randomX = Random.Range(-1.5f, 1.5f);
+                float randomX = Random.Range(-5f, 5f);
                 float randomY = Random.Range(0f, 1.28f);
                 Vector3 newPos = new Vector3(randomX, randomY, instantiatePos.position.z);
-                Instantiate(capsula, newPos, Quaternion.identity);
+                Instantiate(obstaculo[n], newPos, Quaternion.identity);
 
             }
 

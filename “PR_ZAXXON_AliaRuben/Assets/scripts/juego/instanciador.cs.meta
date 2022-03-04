@@ -4,8 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - capsula: {fileID: 8792922527177050420, guid: 3c8cd7338eea6dc43bc9211a8a2dd585, type: 3}
-  - initPost: {instanceID: 0}
+  - capsula: {fileID: 100000, guid: a2d308598386f4a0797f87a4b95b9dd1, type: 3}
+  - power: {fileID: 3827191576194791466, guid: d10219a6d8368a545a3ebe4a855a771f, type: 3}
+  - instantiatePos: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

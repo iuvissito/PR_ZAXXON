@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/juego/final.unity
     guid: bccc123f07d98c64f971d9c702ec3834
+  - enabled: 1
+    path: Assets/Scenes/juego/SALA DEL TRONO.unity
+    guid: 1e8bdf452de24d547b22e51baa290e44
   m_configObjects: {}

@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class initmenu : MonoBehaviour
 {
+    public void MenuInicial()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void IniciarJuego()
     {
         SceneManager.LoadScene(1);
@@ -15,10 +19,7 @@ public class initmenu : MonoBehaviour
     }
     public void  IniciarTrhone()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
-    public void MenuInicial()
-    {
-        SceneManager.LoadScene(0);
-    }
+    
 }
